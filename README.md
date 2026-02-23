@@ -21,7 +21,7 @@ Split the dataset into training and testing
 
 ### STEP 3: 
 
-Create MinMaxScalar objects ,fit the model and transform the data.
+Create MinMaxScalar objects, fit the model, and transform the data.
 
 ### STEP 4: 
 
@@ -33,7 +33,7 @@ Train the model with the training data.
 
 ### STEP 6: 
 
-Plot the performance plot
+Plot the performance plot.
 
 ### STEP 7: 
 
@@ -41,7 +41,7 @@ Evaluate the model with the testing data.
 
 ### STEP 8: 
 
-Use the trained model to predict  for a new input value .
+Use the trained model to predict  for a new input value.
 
 ## PROGRAM
 
@@ -52,7 +52,7 @@ Use the trained model to predict  for a new input value .
 ```
 import torch
 import torch.nn as nn
-import torch.optim as optim
+import torch. optim as optim
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -74,7 +74,7 @@ y_train_tensor = torch.tensor(y_train, dtype=torch.float32).view(-1, 1)
 X_test_tensor = torch.tensor(X_test, dtype=torch.float32)
 y_test_tensor = torch.tensor(y_test, dtype=torch.float32).view(-1, 1)
 
-# Name:KAAVIYAN K
+# Name: KAAVIYAN K
 # Register Number:21224240066
 class NeuralNet(nn.Module):
   def __init__(self):
@@ -95,8 +95,8 @@ ai_brain=NeuralNet()
 criterion = nn.MSELoss()
 optimizer = optim.RMSprop(ai_brain.parameters(), lr=0.001)
 
-# Name:R N SOMNATH
-# Register Number:21224240158
+# Name: KAAVIYAN K
+# Register Number:21224240066
 def train_model(ai_brain, X_train, y_train, criterion, optimizer, epochs=2000):
     for epoch in range(epochs):
       optimizer.zero_grad()
